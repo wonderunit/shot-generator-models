@@ -40,8 +40,7 @@ By blending a combination, you can make many body shapes:
 
 The mesh of the model is rigged/skinned mostly by Mixamo's online tool. We use their standard 65 bone Standard Skeleton, which includes individual fingers. The bone names are named like: mixamorig:LeftUpLeg
 
-![screenshot 2019-01-05 11 03 10](https://user-images.githubusercontent.com/441117/50726908-49999a00-10e1-11e9-8bbc-71aefa5df0ac.png | width=100)
-
+<img src="https://user-images.githubusercontent.com/441117/50726908-49999a00-10e1-11e9-8bbc-71aefa5df0ac.png" width="300">
 
 ### Scale (Height)
 
