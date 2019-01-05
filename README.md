@@ -7,11 +7,11 @@ Shot Generator uses 3D models as characters. This repository is the open source 
 ## Characters
 
 The objective of Shot Generator is to keep the setup of a shot extremely simple. Therefore, the characters are designed with the silhouette of the character in mind - a shape that upon quick glance, you can tell:
-  * gender
-  * age
-  * body type
-  * height
-  * pose.
+  * Gender
+  * Age
+  * Body type
+  * Height
+  * Pose
 
 ### The Models
 
@@ -63,6 +63,31 @@ Posing is done in the engine. This is by rotating bones, and saving a preset of 
 ### UV / Texture
 
 There is one material and one texture. It's adjacent to the model in the textures folder.
+
+## Custom Character Models
+
+The main reason why we are releasing these models open source is so people can make their own models or customize the existing models.
+
+Making a new model should be fairly simple.
+
+What you don't need: 
+  * You don't even need a rigged skeleton. (It will work without - of course you can't pose it)
+  * You don't need a standard skeleton. (You can pose any bones. So you could have a rigged dog.)
+  * You don't need blend shapes / morph targets.
+  * You can have any blend shapes you want (It will load them in dynamically)
+
+What you need:
+  * A model with a mesh
+  * A single material with a single texture
+
+So some custom examples:
+  * A character downloaded off the internet with no rig and you don't need to pose it
+  * A dog
+  * A snake
+  * A monster
+  * A person with very specific morph targets
+  * A very specific model with lots of detail
+  * A model based on one of these models you slightly edited
 
 ----
 
