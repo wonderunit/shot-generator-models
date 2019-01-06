@@ -85,7 +85,7 @@ What you need:
 
 So some custom examples:
   * A character downloaded off the internet with no rig and you don't need to pose it
-  * A dog
+  * A dog - Who's a good boy?<br>  <img src="https://user-images.githubusercontent.com/441117/50732776-b5b2e700-114f-11e9-8877-d4b160e30389.png" width="300">
   * A snake
   * A monster
   * A person with very specific morph targets
