@@ -13,7 +13,11 @@ Armature > "DESELECT" Add Leaf Bones
 
 https://github.com/facebookincubator/FBX2glTF/releases
 
+```
 ./FBX2glTF-darwin-x64 -b -d --pbr-metallic-roughness -i shot-generator-models/characters/base/male-adult/male-adult.fbx -o shot-generator-models/characters/base/male-adult/adult-male
 ./FBX2glTF-darwin-x64 -b -d --pbr-metallic-roughness -i shot-generator-models/characters/base/male-youth/male-youth.fbx -o shot-generator-models/characters/base/male-youth/youth-male
 ./FBX2glTF-darwin-x64 -b -d --pbr-metallic-roughness -i shot-generator-models/characters/base/female-adult/female-adult.fbx -o shot-generator-models/characters/base/female-adult/adult-female
 ./FBX2glTF-darwin-x64 -b -d --pbr-metallic-roughness -i shot-generator-models/characters/base/female-youth/female-youth.fbx -o shot-generator-models/characters/base/female-youth/youth-female
+
+```
+
