@@ -1,21 +1,45 @@
-# Exporting
+## 1. Create all of the LOD Models
 
-There is a bug in the GLTF exporter for blender. Therefore, to export the models, you first have to export the FBX, and then use another utility to convert the FBX file to GLTF.
+1. Name main model something like `male-youth-LOD0`
+2. Duplicate the main model `(Shift + D, Escape)`
+3. Remove shape keys on the duplicate
+4. Add a decimate modifier to the duplicate
+  * with `symmetry`
+5. Add shrinkwrap modifier
+  * select the target of `LOD0`
+6. Copy shrinkwrap 2 times
+7. Rename each shrinkwap:
+  * `Skinny`
+  * `Muscular`
+  * `Obese`
+8. Duplicate 3 more times so you have 5 models and rename to:
+  * `male-youth-LOD0`
+  * `male-youth-LOD1`
+  * `male-youth-LOD2`
+  * `male-youth-LOD3`
+  * `male-youth-LOD4`
+9. Apply decimate modifier to each:
+  * LOD0 - 13,000 polys (100%)
+  * LOD1 - 6,000 polys (44%)
+  * LOD2 - 2,000 polys 
+  * LOD3 - 750 polys
+  * LOD4 - 400 polys
+10. And apply
 
-## 1. Export to FBX
+## 2. Create the shape keys by shrink wrapping
 
-Export FBX..
+1. Make sure LOD0 model has the shapekeys named:
+  * Skinny
+  * Muscular
+  * Obese
+2. LOOP: For each shape key (Skinny, Muscular, Obese):
+  * Click LOD0: Shape keys
+    * Turn all down to 0
+    * Turn the correct shape key (Skinny, Muscular, Obese) up to 1.0
+  * Click on LOD1-4: Modifiers
+    * Apply correct Shrink Wrap modifier as Shape key
+3. Repeat for each LOD1+ and Shape key
 
-Main > Apply Scale: "FBX ALL"
-Armature > "DESELECT" Add Leaf Bones
-
-## 2. Convert FBX to GLTF
-
-https://github.com/facebookincubator/FBX2glTF/releases
-
-```
-./FBX2glTF-darwin-x64 -b --blend-shape-normals --blend-shape-tangents --pbr-metallic-roughness -i shot-generator-models/characters/base/male-adult/male-adult.fbx -o shot-generator-models/characters/base/male-adult/adult-male
-./FBX2glTF-darwin-x64 -b --blend-shape-normals --blend-shape-tangents --pbr-metallic-roughness -i shot-generator-models/characters/base/male-youth/male-youth.fbx -o shot-generator-models/characters/base/male-youth/teen-male
-./FBX2glTF-darwin-x64 -b --blend-shape-normals --blend-shape-tangents --pbr-metallic-roughness -i shot-generator-models/characters/base/female-adult/female-adult.fbx -o shot-generator-models/characters/base/female-adult/adult-female
-./FBX2glTF-darwin-x64 -b --blend-shape-normals --blend-shape-tangents --pbr-metallic-roughness -i shot-generator-models/characters/base/female-youth/female-youth.fbx -o shot-generator-models/characters/base/female-youth/teen-female
-```
+## OPTIONAL:
+  
+1. Correct UV map
